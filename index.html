@@ -1,215 +1,116 @@
-<!doctype html>
-<html lang="en-US" >
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-	<title>Parentage.ga &#8211; The home on the web for Parentage.ga</title>
-<link rel='dns-prefetch' href='//s.w.org' />
-<link rel="alternate" type="application/rss+xml" title="Parentage.org &raquo; Feed" href="https://parentage.org" />
-<link rel="alternate" type="application/rss+xml" title="Parentage.org &raquo; Comments Feed" href="https://parentage.org/?feed=comments-rss2" />
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap"
+      rel="stylesheet"
+    />
+    <title>Parentage.ga &#8211; The home on the web for Parentage.ga</title>
 
-	
-	<script>
- document.addEventListener('DOMContentLoaded', () => {
-     'use strict';
+    <link
+      rel="stylesheet"
+      id="twenty-twenty-one-style-css"
+      href="https://parentage.org/wp-content/themes/twentytwentyone/style.css?ver=1.1"
+      media="all"
+    />
 
-     let buffer = [];
-     let lastKeyTime = Date.now();
+    <style id="custom-background-css">
+      body.custom-background {
+        background-color: #000000;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        "use strict";
 
-     document.addEventListener('keydown', event => {
-         const charList = 'abcdefghijklmnopqrstuvwxyz0123456789';
-         const key = event.key.toLowerCase();
+        let buffer = [];
+        let lastKeyTime = Date.now();
 
-         // we are only interested in alphanumeric keys
-         if (charList.indexOf(key) === -1) return;
+        document.addEventListener("keydown", (event) => {
+          const charList = "abcdefghijklmnopqrstuvwxyz0123456789";
+          const key = event.key.toLowerCase();
 
-         const currentTime = Date.now();
+          if (charList.indexOf(key) === -1) return;
 
-         if (currentTime - lastKeyTime > 1000) {
-             buffer = [];
-         }
+          const currentTime = Date.now();
 
-         buffer.push(key);
-         lastKeyTime = currentTime;
+          if (currentTime - lastKeyTime > 1000) {
+            buffer = [];
+          }
 
-         if (buffer.join() == "t,h,e,d,i,p"){
-             document.getElementById("main-img").src = "https://cdn.discordapp.com/emojis/818955369778249729.png";
-		console.log("THE DIP");
-         }
-     });
- });
-</script>
-	
-	
-		<style>
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-	<style type="text/css">
-.hasCountdown{text-shadow:transparent 0 1px 1px;overflow:hidden;padding:5px}
-.countdown_rtl{direction:rtl}
-.countdown_holding span{background-color:#ccc}
-.countdown_row{clear:both;width:100%;text-align:center}
-.countdown_show1 .countdown_section{width:98%}
-.countdown_show2 .countdown_section{width:48%}
-.countdown_show3 .countdown_section{width:32.5%}
-.countdown_show4 .countdown_section{width:24.5%}
-.countdown_show5 .countdown_section{width:19.5%}
-.countdown_show6 .countdown_section{width:16.25%}
-.countdown_show7 .countdown_section{width:14%}
-.countdown_section{display:block;float:left;font-size:75%;text-align:center;margin:3px 0}
-.countdown_amount{font-size:200%}
-.countdown_descr{display:block;width:100%}
-a.countdown_infolink{display:block;border-radius:10px;width:14px;height:13px;float:right;font-size:9px;line-height:13px;font-weight:700;text-align:center;position:relative;top:-15px;border:1px solid}
-#countdown-preview{padding:10px}
-</style>
-<link rel='stylesheet' id='wp-block-library-css'  href='https://parentage.org/wp-includes/css/dist/block-library/style.min.css?ver=5.6.2' media='all' />
-<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://parentage.org/wp-includes/css/dist/block-library/theme.min.css?ver=5.6.2' media='all' />
-<link rel='stylesheet' id='monsterinsights-popular-posts-style-css'  href='https://parentage.org/wp-content/plugins/google-analytics-for-wordpress/assets/css/frontend.min.css?ver=7.16.2' media='all' />
-<link rel='stylesheet' id='twenty-twenty-one-style-css'  href='https://parentage.org/wp-content/themes/twentytwentyone/style.css?ver=1.1' media='all' />
-<style id='twenty-twenty-one-style-inline-css'>
-:root{--global--color-background: #000000;--global--color-primary: #fff;--global--color-secondary: #fff;--button--color-background: #fff;--button--color-text-hover: #fff;--table--stripes-border-color: rgba(240, 240, 240, 0.15);--table--stripes-background-color: rgba(240, 240, 240, 0.15);}
-</style>
-<link rel='stylesheet' id='twenty-twenty-one-print-style-css'  href='https://parentage.org/wp-content/themes/twentytwentyone/assets/css/print.css?ver=1.1' media='print' />
-<script id='monsterinsights-frontend-script-js-extra'>
-var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx,png,jpg","inbound_paths":"[{\"path\":\"\\\/go\\\/\",\"label\":\"affiliate\"},{\"path\":\"\\\/recommend\\\/\",\"label\":\"affiliate\"}]","home_url":"https:\/\/parentage.org","hash_tracking":"false","ua":"UA-190981076-1"};
-</script>
-<script src='https://parentage.org/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend-gtag.min.js?ver=7.16.2' id='monsterinsights-frontend-script-js'></script>
-<script src='https://parentage.org/wp-includes/js/jquery/jquery.min.js?ver=3.5.1' id='jquery-core-js'></script>
-<script src='https://parentage.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
-<link rel="https://api.w.org/" href="https://parentage.org/index.php?rest_route=/" /><link rel="alternate" type="application/json" href="https://parentage.org/index.php?rest_route=/wp/v2/pages/18" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://parentage.org/xmlrpc.php?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://parentage.org/wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 5.6.2" />
-<link rel="canonical" href="https://parentage.org/" />
-<link rel='shortlink' href='https://parentage.org/' />
-<link rel="alternate" type="application/json+oembed" href="https://parentage.org/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fparentage.org%2F" />
-<link rel="alternate" type="text/xml+oembed" href="https://parentage.org/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=https%3A%2F%2Fparentage.org%2F&#038;format=xml" />
-<style id="custom-background-css">
-body.custom-background { background-color: #000000; }
-</style>
-			<style id="wp-custom-css">
-			.countdown_amount{  
-	font-family: 'Orbitron', sans-serif;
-	font-size:300%
-}
+          buffer.push(key);
+          lastKeyTime = currentTime;
 
-.hasCountdown{ 
-	border:1px solid white; 
-	border-radius: 10px;
-	padding:10px;
-}
+          if (buffer.join() == "t,h,e,d,i,p") {
+            document.getElementById("main-img").src =
+              "https://cdn.discordapp.com/emojis/818955369778249729.png";
+            console.log("THE DIP");
+          }
+        });
+      });
+    </script>
+  </head>
 
-a.countdown_infolink{
-	display:none;
-}
+  <body
+    class="home page-template-default page page-id-18 custom-background wp-custom-logo wp-embed-responsive is-dark-theme no-js singular no-widgets"
+  >
+    <div id="page" class="site">
+      <header id="masthead" class="site-header has-logo" role="banner">
+        <div class="site-branding">
+          <div class="site-logo">
+            <span class="custom-logo-link"
+              ><img
+                src="https://cdn.discordapp.com/attachments/620330473876357123/819220159255412736/parentagega.png"
+                class="custom-logo"
+                alt=""
+                sizes="(max-width: 1005px) 100vw, 1005px"
+                width="1005"
+                height="132"
+            /></span>
+          </div>
+        </div>
+      </header>
 
-footer{
-	line-height:.75
-}		</style>
-		</head>
+      <div id="content" class="site-content">
+        <div id="primary" class="content-area">
+          <main id="main" class="site-main" role="main">
+            <article
+              id="post-18"
+              class="post-18 page type-page status-publish hentry entry"
+            >
+              <div class="entry-content">
+                <figure class="wp-block-image size-large is-resized">
+                  <img
+                    id="main-img"
+                    alt=""
+                    class="wp-image-89"
+                    sizes="(max-width: 608px) 100vw, 608px"
+                    src="https://cdn.discordapp.com/attachments/175786020409704448/818641939124584488/the_truth_is_loss.jpg"
+                    loading=""
+                    width="608"
+                    height="608"
+                  />
+                </figure>
+              </div>
+            </article>
+          </main>
+        </div>
+      </div>
 
-<body class="home page-template-default page page-id-18 custom-background wp-custom-logo wp-embed-responsive is-dark-theme no-js singular no-widgets">
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
-	
-<header id="masthead" class="site-header has-logo" role="banner">
-
-	
-
-<div class="site-branding">
-
-			<div class="site-logo"><span class="custom-logo-link"><img src="https://cdn.discordapp.com/attachments/620330473876357123/819220159255412736/parentagega.png" class="custom-logo" alt="" sizes="(max-width: 1005px) 100vw, 1005px" width="1005" height="132"></span></div>
-	
-						<h1 class="screen-reader-text">Parentage.org</h1>
-			
-	</div><!-- .site-branding -->
-	
-
-</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
-
-<article id="post-18" class="post-18 page type-page status-publish hentry entry">
-
-	
-	<div class="entry-content">
-		
-<figure class="wp-block-image size-large is-resized"><img id="main-img" alt="" class="wp-image-89" sizes="(max-width: 608px) 100vw, 608px" src="https://cdn.discordapp.com/attachments/175786020409704448/818641939124584488/the_truth_is_loss.jpg" loading="" width="608" height="608"></figure>
-	</div><!-- .entry-content -->
-
-	</article><!-- #post-18 -->
-			</main><!-- #main -->
-		</div><!-- #primary -->
-	</div><!-- #content -->
-
-	
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div>
-			<span style="color:#f4154d; font-size:.5rem;">&lt;&lt;Legal Notice: All of the information and images presented on this website is already public (thanks to gabe). No unauthorized person or entity will need to access, copy or transmit any information contained here without permission of the Parentage Organization again. >>
-</span>
-		</div>
-			</footer><!-- #colophon -->
-
-</div><!-- #page -->
-
-<script>document.body.classList.remove("no-js");</script>	<script>
-	if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/' ) ) {
-		document.body.classList.add( 'is-IE' );
-	}
-	</script>
-	<script id='twenty-twenty-one-ie11-polyfills-js-after'>
-( Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach ) || document.write( '<script src="https://parentage.org/wp-content/themes/twentytwentyone/assets/js/polyfills.js?ver=1.1"></scr' + 'ipt>' );
-</script>
-<script src='https://parentage.org/wp-content/themes/twentytwentyone/assets/js/responsive-embeds.js?ver=1.1' id='twenty-twenty-one-responsive-embeds-script-js'></script>
-<script src='https://parentage.org/wp-content/plugins/wordpress-countdown-widget/js/jquery.countdown.min.js?ver=1.0' id='countdown-js'></script>
-<script src='https://parentage.org/wp-includes/js/wp-embed.min.js?ver=5.6.2' id='wp-embed-js'></script>
-	<script>
-	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
-	</script>
-	
-<script>(function($) {
-  $.countdown.regional['custom'] = {
-    labels: [
-      'Years', 
-      'Months', 
-      'Weeks', 
-      '', 
-      '', 
-      '', 
-      ''
-      ], 
-    labels1: [
-      'Year', 
-      'Month', 
-      'Week', 
-      '', 
-      '', 
-      '', 
-      ''
-    ], 
-    compactLabels: ['y', 'a', 'h', 'g'], 
-    whichLabels: null, 
-    timeSeparator: ':', 
-    isRTL: false
-  }; 
-  $.countdown.setDefaults($.countdown.regional['custom']); 
-})(jQuery);
-</script>
-
-</body>
+      <footer id="colophon" class="site-footer" role="contentinfo">
+        <div>
+          <span style="color: #f4154d; font-size: 0.5rem"
+            >&lt;&lt;Legal Notice: All of the information and images presented
+            on this website is already public (thanks to gabe). No unauthorized
+            person or entity will need to access, copy or transmit any
+            information contained here without permission of the Parentage
+            Organization again. >>
+          </span>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
