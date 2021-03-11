@@ -69,6 +69,7 @@
                 sizes="(max-width: 1005px) 100vw, 1005px"
                 width="1005"
                 height="132"
+                onclick="sequence('n')"
             /></span>
           </div>
         </div>
@@ -83,6 +84,45 @@
             >
               <div class="entry-content">
                 <figure class="wp-block-image size-large is-resized">
+                  <div class="gameboard">
+                    <div class="row1">
+                      <div id="cell1" onclick="sequence('1')"></div>
+                      <div id="cell2" onclick="sequence('2')"></div>
+                    </div>
+
+                    <div class="row2">
+                      <div id="cell3" onclick="sequence('3')"></div>
+                      <div id="cell4" onclick="sequence('4')"></div>
+                    </div>
+                  </div>
+
+                  <style>
+                    .gameboard {
+                      width: 608px;
+                      height: 608px;
+                      z-index: 10;
+                      position: absolute;
+                    }
+                    .button {
+                      background-color: white;
+                      width: 160px;
+                      margin: 0 auto;
+                    }
+                    .row1,
+                    .row2 {
+                      clear: both;
+                    }
+                    #cell1,
+                    #cell2,
+                    #cell3,
+                    #cell4 {
+                      width: 304px;
+                      height: 304px;
+                      float: left;
+                      z-index: 20;
+                    }
+                  </style>
+
                   <img
                     id="main-img"
                     alt=""
@@ -100,8 +140,32 @@
         </div>
       </div>
 
+      <script>
+        let buffer2 = [];
+        let lastKeyTime2 = Date.now();
+
+        function sequence(key) {
+          const currentTime = Date.now();
+
+          if (currentTime - lastKeyTime2 > 3000) {
+            buffer2 = [];
+          }
+
+          buffer2.push(key);
+          lastKeyTime2 = currentTime;
+          if (buffer2.join() == "1,2,n,4,3") {
+            document.getElementById("audio").play();
+            console.log("mooN");
+          }
+        }
+      </script>
+
+      <audio id="audio">
+        <source src="dip.mp3" type="audio/mpeg" />
+      </audio>
+
       <!-- Credit to discord user galacticterror#6011 for the loss meme which was posted in the oxenfree discord (https://discord.gg/RjaaqQW) -->
-      
+
       <footer id="colophon" class="site-footer" role="contentinfo">
         <div>
           <p style="color: #f4154d; font-size: 0.5rem">
